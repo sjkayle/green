@@ -1,0 +1,46 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs'
+import { Table } from './table'
+
+export const Template = ({ ...props }) => <Table {...props} />
+
+<Meta title="Components/Table" component={Table} />
+
+<Canvas>
+  <Story
+    name="Table"
+    args={{
+      tableHeaders: [
+        'header_1',
+        'header_2',
+        'header_3',
+        'header_4',
+        'header_5',
+      ],
+      tableData: [
+        {
+          header_1: 'Zebra',
+          header_2: 'Apple',
+          header_3: 'Orange',
+          header_4: 'Pear',
+          header_5: 'Random',
+        },
+        {
+          header_1: 'New',
+          header_2: 'Cell',
+          header_3: 'Blah',
+          header_4: 'Tiger',
+          header_5: 'Monkey',
+        },
+        {
+          header_1: 'Donkey',
+          header_2: 'Fish',
+          header_3: 'Crab',
+          header_4: 'Lion',
+          header_5: 'Dog',
+        },
+      ],
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
